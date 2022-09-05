@@ -1,0 +1,12 @@
+<manifest version="2.0" type="framework">
+    <hal format="hidl">
+        <name>android.hidl.manager</name>
+        <transport>hwbinder</transport>
+        <version>1.2</version>
+        <interface>
+            <name>IServiceManager</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.2::IServiceManager/default</fqname>
+    </hal>
+</manifest>
