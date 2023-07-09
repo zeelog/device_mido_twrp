@@ -40,3 +40,11 @@ on boot
     start keymaster-3-0
     start keymaster-3-0-qti
     start keymaster-4-0-qti
+
+on boot
+    write /sys/bus/cpu/devices/cpu2/online 0
+    write /sys/bus/cpu/devices/cpu3/online 0
+    write /sys/bus/cpu/devices/cpu4/online 0
+    write /sys/bus/cpu/devices/cpu5/online 0
+    write /sys/bus/cpu/devices/cpu6/online 0
+    write /sys/bus/cpu/devices/cpu7/online 0
