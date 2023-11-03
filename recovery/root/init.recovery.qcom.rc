@@ -31,3 +31,12 @@ on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
     export ANDROID_ROOT /system_root
+
+on boot
+    mkdir /firmware
+    mount vfat /dev/block/bootdevice/by-name/modem /firmware ro
+    start qseecomd
+    exec u:r:recovery:s0 -- /system/bin/sleep 1s
+    start keymaster-3-0
+    start keymaster-3-0-qti
+    start keymaster-4-0-qti
