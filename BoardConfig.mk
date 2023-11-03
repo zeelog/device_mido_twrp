@@ -30,6 +30,9 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
+# Board Info
+TARGET_BOARD_INFO_FILE := $(LOCAL_PATH)/board-info.txt
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := mido
 TARGET_NO_BOOTLOADER := true
